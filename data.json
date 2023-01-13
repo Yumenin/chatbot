@@ -1,6 +1,24 @@
 {            
     "suggestions": {
-        "SetAppointment": ["I want to set up an appointment", "I want to know the details about my existing appointment"],
-        "GetAppointment": ["I would like to set up an appointment", "I would like to check my existing appointment details"]
+        "SetAppointment": ["I want to set up an appointment",
+        "I want to know the details about my existing appointment",
+        "I want to schedule an appointment",
+        "I would like to make an appointment",
+        "Please schedule an appointment for me."]
+        ,
+
+        "GetAppointment": ["I would like to set up an appointment",
+         "I would like to check my existing appointment details",
+         "To check an existing appointment"]
+    },
+
+    "SetAppointment_Responses": {
+        "firstResponse": ["OK, setting an appointment requires a few details from you.",
+        "Alright, we would have to acquire some details from you to process your appointment.",
+        "Got that, but first we would like to get a few information from you to complete this process."]
+        ,
+
+        "secondResponse": ["Alright, please indicate which medical department would you like to consult with.",
+                           "Next, which department would you like to go? "]
     }
 }
