@@ -7,9 +7,11 @@
         "Please schedule an appointment for me"]
         ,
 
-        "GetAppointment": ["I would like to set up an appointment",
-         "I would like to check my existing appointment details",
-         "To check an existing appointment"]
+        "GetAppointment": ["I would like to know my current appointment",
+         "I would like to check my existing appointment details"]
+         ,
+
+         "ExitProgram": ["Please stop the program", "Quit", "Stop program", "Quit program"]
     },
 
     "SetAppointment_Responses": {
@@ -25,6 +27,7 @@
         "thirdResponse": ["Last step, please type your contact number so that we have a means to contact you",
                           "Final step to wrap everything up: please type your contact number for communication purposes"]
     },
+   
 
     "Error_Responses_Department": ["Sorry, but we don't have that kind of department in the hospital.", 
     "It seems that we don't have that department in our hospital. Please type an appropriate one.",
