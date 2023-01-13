@@ -1,5 +1,5 @@
 {            
-    "suggestions": {
+    "Suggestions": {
         "SetAppointment": ["I want to set up an appointment",
         "I want to know the details about my existing appointment",
         "I want to schedule an appointment",
@@ -20,5 +20,7 @@
 
         "secondResponse": ["Alright, please indicate which medical department would you like to consult with.",
                            "Next, which department would you like to go? "]
-    }
+    },
+
+    "Medical_Departments": ["Cardiology", "Pediatrics", "Otorhinolaryngology", "Hematology"]
 }
