@@ -1,10 +1,10 @@
 {            
-    "Suggestions": {
+    "Choices": {
         "SetAppointment": ["I want to set up an appointment",
         "I want to know the details about my existing appointment",
         "I want to schedule an appointment",
         "I would like to make an appointment",
-        "Please schedule an appointment for me."]
+        "Please schedule an appointment for me"]
         ,
 
         "GetAppointment": ["I would like to set up an appointment",
@@ -20,7 +20,15 @@
 
         "secondResponse": ["Alright, please indicate which medical department would you like to consult with.",
                            "Next, which department would you like to go? "]
+        ,
+
+        "thirdResponse": ["Last step, please type your contact number so that we have a means to contact you",
+                          "Final step to wrap everything up: please type your contact number for communication purposes"]
     },
+
+    "Error_Responses_Department": ["Sorry, but we don't have that kind of department in the hospital.", 
+    "It seems that we don't have that department in our hospital. Please type an appropriate one.",
+    "Apologies, but we don't offer that department right now. Please use an existing one based on the available choices."],
 
     "Medical_Departments": ["Cardiology", "Pediatrics", "Otorhinolaryngology", "Hematology"]
 }
