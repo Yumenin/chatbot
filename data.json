@@ -1,14 +1,14 @@
 {            
     "Choices": {
         "SetAppointment": ["I want to set up an appointment",
-        "I want to know the details about my existing appointment",
         "I want to schedule an appointment",
         "I would like to make an appointment",
         "Please schedule an appointment for me"]
         ,
 
         "GetAppointment": ["I would like to know my current appointment",
-         "I would like to check my existing appointment details"]
+         "I would like to check my existing appointment details",
+         "I want to know the details about my existing appointment"]
          ,
 
          "ExitProgram": ["Please stop the program", "Quit", "Stop program", "Quit program"]
