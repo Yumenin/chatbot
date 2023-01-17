@@ -1,48 +1,21 @@
 {
     "patients": [
         {
-            "YrT9hpxzh": {
-                "patientName": "Aurum",
-                "patientCheckupDepartment": "hematology",
-                "userContactNumber": "80001213014",
-                "userAppointmentCode": "YrT9hpxzh",
-                "DateTime": "2023-01-15 13:57:51.520133, 13:57:51"
-            }
-        },
-        {
-            "rAsXIe": {
-                "patientName": "Gelo",
-                "patientCheckupDepartment": "hematology",
-                "userContactNumber": "09191929131",
-                "userAppointmentCode": "rAsXIe",
-                "DateTime": "2023-01-17 17:51:09.911986, 17:51:09"
-            }
-        },
-        {
-            "b4g4UErr": {
-                "patientName": "Erico Master",
+            "oPug": {
+                "patientName": "James Bernard Udal",
                 "patientCheckupDepartment": "cardiology",
-                "userContactNumber": "097456712",
-                "userAppointmentCode": "b4g4UErr",
-                "DateTime": "2023-01-17 20:09:54.704525, 20:09:54"
+                "userContactNumber": "091231245",
+                "userAppointmentCode": "oPug",
+                "DateTime": "2023-01-23 16:00:00"
             }
         },
         {
-            "PH04": {
-                "patientName": "James Bernard Udal",
-                "patientCheckupDepartment": "pediatrics",
-                "userContactNumber": "123213213123213",
-                "userAppointmentCode": "PH04",
-                "DateTime": "2023-01-17 20:15:00.920318, 20:15:00"
-            }
-        },
-        {
-            "DNlFgitfi": {
-                "patientName": "James Bernard Udal",
-                "patientCheckupDepartment": "hematology",
-                "userContactNumber": "123456789",
-                "userAppointmentCode": "DNlFgitfi",
-                "DateTime": "2023-01-17 20:44:31.471593, 20:44:31"
+            "8VYe": {
+                "patientName": "Dummy Person #1",
+                "patientCheckupDepartment": "pEdiatrics",
+                "userContactNumber": "12345678",
+                "userAppointmentCode": "8VYe",
+                "DateTime": "2023-01-24 15:16:00"
             }
         }
     ]

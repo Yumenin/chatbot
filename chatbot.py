@@ -3,10 +3,13 @@ import json
 import random
 import os
 from datetime import datetime
+from datetime import date
 from collections import deque
 import secrets
 import string
 
+def genRandomDate():
+    return datetime(2023, 1, random.randint(date.today().day, 28), hour=random.randint(12, 18), minute=random.randint(0, 30))
 
 def ChatBot():
     # critical file
@@ -48,7 +51,7 @@ def ChatBot():
                 existingFile = open("./patients.json", "r+")
                 rawData = json.load(existingFile)
                 queue = deque(rawData['patients'])
-                newPatient = {randomCode: {"patientName": userFullName, "patientCheckupDepartment": userChosenDepartment, "userContactNumber": userContactNumber, "userAppointmentCode": randomCode, "DateTime": f"{str(datetime.now())}, {datetime.now().strftime('%H:%M:%S')}"} }
+                newPatient = {randomCode: {"patientName": userFullName, "patientCheckupDepartment": userChosenDepartment, "userContactNumber": userContactNumber, "userAppointmentCode": randomCode, "DateTime": f"{genRandomDate()}"} }
                 queue.append(newPatient)
                 existingFile.seek(0)
                 existingFile.write(json.dumps({"patients": list(queue)}, indent=4))
@@ -60,7 +63,7 @@ def ChatBot():
             else:
                 queue = deque([])
                 queue.append({randomCode: {"patientName": userFullName, "patientCheckupDepartment": userChosenDepartment, "userContactNumber": userContactNumber, "userAppointmentCode":
-                 randomCode, "DateTime": f"{str(datetime.now())}, {datetime.now().strftime('%H:%M:%S')}"}})
+                 randomCode, "DateTime": f"{genRandomDate()}"}})
                 newPatientsData = open("patients.json", "w")
                 newPatientsData.write(json.dumps({"patients": list(queue)}, indent=4))
                 newPatientsData.close()
@@ -103,14 +106,13 @@ def ChatBot():
             else:
                 print("BOT: No appointment code found, returning you to the state prior to execution of the command.\n")
                 continue
-
         elif userInput.lower() in [response.lower() for response in data['Choices']['ExitProgram']]:
             print("\nBOT: Exiting program. Thank you for using our service!\n")
             break
-
         else:
             print(f"\nBOT: {random.choice(data['UnrecognizedCommand_Responses'])}\n")
     file.close()
-    
-        
+
+
+
 ChatBot()
