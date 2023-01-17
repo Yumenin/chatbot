@@ -20,11 +20,14 @@ def ChatBot():
     print("============================================================================")
     print(f"\nSetting Appointment Commands: {data['Choices']['SetAppointment']}\n\nGetting Appointment Commands: {data['Choices']['GetAppointment']}")
     print("============================================================================")
-    print(f"\nSuggestions: \nSetting Appointment: {random.choice(data['Choices']['SetAppointment'])}.\nCheck existing appointment: {random.choice(data['Choices']['GetAppointment'])}\n")
+    # print(f"\nSuggestions: \nSetting Appointment: {random.choice(data['Choices']['SetAppointment'])}.\nCheck existing appointment: {random.choice(data['Choices']['GetAppointment'])}\n")
     
-    print("BOT: Hello there! I am a bot designed to help you schedule appointments with your doctor quickly and easily.\n")
-    print("BOT: Please type an appropriate command to start something.\n")
+    # print("BOT: Hello there! I am a bot designed to help you schedule appointments with your doctor quickly and easily.\n")
+    # print("BOT: Please type an appropriate command to start something.\n")
     while(True):
+        print("BOT: Hello there! I am a bot designed to help you schedule appointments with your doctor quickly and easily.\n")
+        print("BOT: Please type an appropriate command to start something.\n")
+        print(f"\nSuggestions: \nSetting Appointment: {random.choice(data['Choices']['SetAppointment'])}.\nCheck existing appointment: {random.choice(data['Choices']['GetAppointment'])}\n")
         userInput = input("You: ")
         if userInput.lower() in [response.lower() for response in data['Choices']['SetAppointment']]:
 

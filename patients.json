@@ -2,7 +2,7 @@
     "patients": [
         {
             "oPug": {
-                "patientName": "James Bernard Udal",
+                "patientName": "Dummy Person Origin",
                 "patientCheckupDepartment": "cardiology",
                 "userContactNumber": "091231245",
                 "userAppointmentCode": "oPug",
@@ -16,6 +16,33 @@
                 "userContactNumber": "12345678",
                 "userAppointmentCode": "8VYe",
                 "DateTime": "2023-01-24 15:16:00"
+            }
+        },
+        {
+            "YJaPZ": {
+                "patientName": "Halo",
+                "patientCheckupDepartment": "cardiology",
+                "userContactNumber": "1234567",
+                "userAppointmentCode": "YJaPZ",
+                "DateTime": "2023-01-18 16:25:00"
+            }
+        },
+        {
+            "VjyioiFC": {
+                "patientName": "HaloVersion2",
+                "patientCheckupDepartment": "hematology",
+                "userContactNumber": "123456",
+                "userAppointmentCode": "VjyioiFC",
+                "DateTime": "2023-01-18 13:17:00"
+            }
+        },
+        {
+            "pFL5R8eQO": {
+                "patientName": "HaloVersion3",
+                "patientCheckupDepartment": "pediatrics",
+                "userContactNumber": "41235768",
+                "userAppointmentCode": "pFL5R8eQO",
+                "DateTime": "2023-01-25 12:02:00"
             }
         }
     ]
