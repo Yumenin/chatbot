@@ -13,13 +13,18 @@ def ChatBot():
     file = open("./data.json")
     data = json.load(file)
     #dataPatients = json.load(open("./patients.json", "a")) if path.exists("patients.json") else json.load(open("./patients.json", "w"))
-
-    print("BOT: Hello there! I am a bot designed to help you schedule appointments with your doctor quickly and easily\n")
-    print(f"Suggestions: \nSetting Appointment: {random.choice(data['Choices']['SetAppointment'])}.\nCheck existing appointment: {random.choice(data['Choices']['GetAppointment'])}\n")
+    print("\n======================  E-KonsultaMo Bot  ========================================")
+    print("============================================================================")
+    print(f"\nSetting Appointment Commands: {data['Choices']['SetAppointment']}\n\nGetting Appointment Commands: {data['Choices']['GetAppointment']}")
+    print("============================================================================")
+    print(f"\nSuggestions: \nSetting Appointment: {random.choice(data['Choices']['SetAppointment'])}.\nCheck existing appointment: {random.choice(data['Choices']['GetAppointment'])}\n")
     
+    print("BOT: Hello there! I am a bot designed to help you schedule appointments with your doctor quickly and easily.\n")
+    print("BOT: Please type an appropriate command to start something.\n")
     while(True):
         userInput = input("You: ")
-        if userInput.lower() in (response.lower() for response in data['Choices']['SetAppointment']):
+        if userInput.lower() in [response.lower() for response in data['Choices']['SetAppointment']]:
+
             print(f"\nBOT: {random.choice(data['SetAppointment_Responses']['firstResponse'])}")
             print("Please type your full name: \n")
             userFullName = input("You: ")
@@ -64,22 +69,48 @@ def ChatBot():
                 patient['patientAppointmentCode'] = queue[0][randomCode]['userAppointmentCode']
                 patient['patientDateTime'] = queue[0][randomCode]['DateTime']
                 
-            
-            print(f"Your appointment has been processed. Your appointment code # is {patient['patientAppointmentCode']}")
-            print(f"Your scheduled appointment date is {patient['patientDateTime']}")
+            print(f"BOT: Your appointment has been processed. Your appointment code # is {patient['patientAppointmentCode']}\n")
+            print(f"BOT: Your scheduled appointment date is {patient['patientDateTime']}\n")
             # appointment number here
-            print("Thank you for using our service. Have a great day!\n")
-        elif userInput.lower() in (response.lower() for response in data['Choices']['SetAppointment']):
-            print("check existing appointment")
+            print("BOT: Returning you back to the original state.\n")
+
+        elif userInput.lower() in [response.lower() for response in data['Choices']['GetAppointment']]:
+            patientsFile = None
+            patientsData = None
+            try:
+                patientsFile = open("./patients.json")
+            except FileNotFoundError:
+                print('\nBOT: Patients.json does not exist yet in current directory.')
+                print("\nBOT: Make an appointment first to start using this functionality.\n")
+                continue
+
+            patientsData = json.load(patientsFile)
+            print(f"\nBOT: {random.choice(data['GetAppointment_Responses'])}:\n")
+            appointmentCode = input("You: ")
+
+            if len([patient for patient in patientsData['patients'] if appointmentCode in patient.keys()]):
+
+                print("\nBOT: Existing Appointment Details Found.\n")
+                patientAppointmentDetails = [patient for patient in patientsData['patients'] if appointmentCode in patient.keys()][0]
+                print("=== Appointment Details ===")
+                print(f"Patient Name: {patientAppointmentDetails[appointmentCode]['patientName']}")
+                print(f"Patient Department: {patientAppointmentDetails[appointmentCode]['patientCheckupDepartment']}")
+                print(f"Appointment Time: {patientAppointmentDetails[appointmentCode]['DateTime']}")
+                print(f"Your appointment number is {patientsData['patients'].index(patientAppointmentDetails) + 1}\n")
+                input("Press anything to continue...\n")
+                print("BOT: Returning you back to the original state.")
+                print()
+            else:
+                print("BOT: No appointment code found, returning you to the state prior to execution of the command.\n")
+                continue
+
+        elif userInput.lower() in [response.lower() for response in data['Choices']['ExitProgram']]:
+            print("\nBOT: Exiting program. Thank you for using our service!\n")
             break
-        elif userInput.lower() in (response.lower() for response in data['Choices']['ExitProgram']):
-            print("Exiting program. Thank you for using our service!")
-            break
+
         else:
-            print("\nSorry, I do not recognize that command!")
+            print(f"\nBOT: {random.choice(data['UnrecognizedCommand_Responses'])}\n")
     file.close()
     
         
-        
-
 ChatBot()
