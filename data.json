@@ -21,12 +21,22 @@
         ,
 
         "secondResponse": ["Alright, please indicate which medical department would you like to consult with.",
-                           "Next, which department would you like to go? "]
+                           "Next, which department would you like to go?"]
         ,
 
         "thirdResponse": ["Last step, please type your contact number so that we have a means to contact you",
                           "Final step to wrap everything up: please type your contact number for communication purposes"]
     },
+
+    "GetAppointment_Responses": ["OK, please enter your appointment code",
+     "Got it, alright so please enter your appointment code",
+     "Sure thing, please type your appointment code"],
+
+     "UnrecognizedCommand_Responses":["Did you mistyped somehow? I do not recognize that command. T_T",
+    "Unfortunately, my programming does not include that command in the responses I can process. >.<",
+    "Woops, I do not recognize that command of yours. Sorry!",
+    "Please type the appropriate command since I cannot process that. Sorry.",
+    "That's too advanced for me to recognize, it seems. I don't have it in my commands, sorry."],
    
 
     "Error_Responses_Department": ["Sorry, but we don't have that kind of department in the hospital.", 
